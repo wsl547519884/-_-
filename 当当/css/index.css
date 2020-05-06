@@ -478,7 +478,7 @@
 .banner .banner_main .banner_bottom .banner_bottom_main > .container ul li ul li p.price {
   height: 16px;
   line-height: 16px;
-  font-size: 14px;
+  font-size: 13px;
   overflow: hidden;
 }
 .banner .banner_main .banner_bottom .banner_bottom_main > .container ul li ul li p.price span {
@@ -487,6 +487,7 @@
 }
 .banner .banner_main .banner_bottom .banner_bottom_main > .container ul li ul li p.price span:nth-of-type(2) {
   font-weight: normal;
+  margin-left: 5px;
   color: #aaa;
   text-decoration: line-through;
 }
@@ -693,6 +694,7 @@
   text-align: center;
   border: 1px solid #eaeaea;
   border-left: 0px;
+  cursor: pointer;
 }
 .banner .banner_right .banner_hot .hot_nav ul li:nth-of-type(1) {
   border-left: 1px solid #eaeaea;
@@ -795,6 +797,10 @@
   left: 145px;
   color: #487a6f;
 }
+.banner .banner_right .banner_hot .hot_list ul li.item .l:hover p > a {
+  color: #ec7814;
+  text-decoration: underline;
+}
 .banner .banner_right .banner_hot .hot_list ul li.hide {
   display: none;
 }
@@ -809,4 +815,382 @@
   bottom: 15px;
   right: 10px;
   color: #5097bc;
+}
+.main {
+  margin-top: 15px;
+}
+.main .main_sole {
+  overflow: hidden;
+}
+.main .main_sole .sole_left {
+  float: left;
+  width: 950px;
+}
+.main .main_sole .sole_left .sole_nav {
+  width: 950px;
+  border-bottom: 1px solid #487a6f;
+}
+.main .main_sole .sole_left .sole_nav .sole_logo {
+  float: left;
+  width: 108px;
+  height: 50px;
+  background: url(../images/雪碧图2.png) 0 0 no-repeat;
+}
+.main .main_sole .sole_left .sole_nav .sole_logo2 {
+  float: left;
+  width: 108px;
+  height: 50px;
+  background: url(../images/雪碧图2.png) 0 -78px no-repeat;
+}
+.main .main_sole .sole_left .sole_nav ul {
+  float: left;
+  height: 35px;
+  line-height: 35px;
+  margin-left: 50px;
+  margin-top: 15px;
+}
+.main .main_sole .sole_left .sole_nav ul li {
+  float: left;
+  font-size: 14px;
+  padding: 0 17px;
+  background: #fff;
+  cursor: pointer;
+}
+.main .main_sole .sole_left .sole_nav ul li.active {
+  font-weight: bold;
+  color: #487a6f;
+  border: 2px solid #487a6f;
+  border-radius: 6px 6px 0 0;
+  border-bottom: none;
+}
+.main .main_sole .sole_left .sole_main ul {
+  display: none;
+}
+.main .main_sole .sole_left .sole_main ul li {
+  float: left;
+  width: 150px;
+  height: 270px;
+  margin-right: 47px;
+  margin-top: 25px;
+}
+.main .main_sole .sole_left .sole_main ul li .l > a {
+  display: block;
+  width: 150px;
+  height: 150px;
+}
+.main .main_sole .sole_left .sole_main ul li .l > a img {
+  width: 100%;
+}
+.main .main_sole .sole_left .sole_main ul li .l > p {
+  height: 18px;
+  line-height: 18px;
+  padding: 7px 20px 0;
+  overflow: hidden;
+}
+.main .main_sole .sole_left .sole_main ul li .l > p a {
+  color: #000;
+}
+.main .main_sole .sole_left .sole_main ul li p.title_log {
+  height: 16px;
+  line-height: 16px;
+  padding: 5px 0 0 43px;
+  background: url(../images/sprite.png) 20px -86px no-repeat;
+  color: #5b877e;
+}
+.main .main_sole .sole_left .sole_main ul li p.price {
+  height: 16px;
+  line-height: 16px;
+  font-size: 13px;
+  padding: 5px 20px;
+  overflow: hidden;
+}
+.main .main_sole .sole_left .sole_main ul li p.price span {
+  font-weight: bold;
+  color: #c30;
+}
+.main .main_sole .sole_left .sole_main ul li p.price span:nth-of-type(2) {
+  font-weight: normal;
+  margin-left: 5px;
+  color: #aaa;
+  text-decoration: line-through;
+}
+.main .main_sole .sole_left .sole_main ul li .l:hover p > a {
+  color: #ec7814;
+  text-decoration: underline;
+}
+.main .main_sole .sole_left .sole_main ul li:nth-of-type(5n) {
+  margin-right: 0;
+}
+.main .main_sole .sole_left .sole_main ul.active {
+  display: block;
+}
+.main .main_sole .sole_right {
+  float: right;
+  position: relative;
+  margin-top: 10px;
+}
+.main .main_sole .sole_right .sole_title {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 34px;
+  background: url(../images/sprite.png) 5px 4px no-repeat;
+}
+.main .main_sole .sole_right .sole_title a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+.main .main_sole .sole_right .sole_title a:hover {
+  color: #ec7814;
+}
+.main .main_sole .sole_right .sole_nav ul li {
+  float: left;
+  box-sizing: border-box;
+  width: 48px;
+  height: 25px;
+  line-height: 23px;
+  text-align: center;
+  border: 1px solid #eaeaea;
+  border-left: 0px;
+  cursor: pointer;
+}
+.main .main_sole .sole_right .sole_nav ul li:nth-of-type(1) {
+  border-left: 1px solid #eaeaea;
+}
+.main .main_sole .sole_right .sole_nav ul li.active {
+  border-top: 2px solid #487a6f;
+  border-bottom: 1px solid #fff;
+  color: #487a6f;
+  font-weight: bold;
+}
+.main .main_sole .sole_right .sole_list ul {
+  padding-top: 10px;
+  height: 535px;
+  display: none;
+  border: 1px solid #d8d8d8;
+  border-top: 0px;
+}
+.main .main_sole .sole_right .sole_list ul li {
+  position: relative;
+  width: 220px;
+  margin: 0 auto;
+  border-bottom: 1px dotted #d8d8d8;
+}
+.main .main_sole .sole_right .sole_list ul li .num {
+  position: absolute;
+  height: 24px;
+  line-height: 24px;
+  font-size: 16px;
+  color: #000;
+}
+.main .main_sole .sole_right .sole_list ul li.bar .num {
+  top: 5px;
+  left: 5px;
+}
+.main .main_sole .sole_right .sole_list ul li.bar .num1 {
+  color: #d10000;
+}
+.main .main_sole .sole_right .sole_list ul li.bar a {
+  display: block;
+  height: 38px;
+  line-height: 38px;
+  overflow: hidden;
+  color: #000;
+  word-break: break-all;
+  word-wrap: break-word;
+  margin-left: 35px;
+}
+.main .main_sole .sole_right .sole_list ul li.item {
+  height: 150px;
+}
+.main .main_sole .sole_right .sole_list ul li.item .num {
+  top: 5px;
+  left: 5px;
+}
+.main .main_sole .sole_right .sole_list ul li.item .num1 {
+  color: #d10000;
+}
+.main .main_sole .sole_right .sole_list ul li.item .l > a {
+  position: absolute;
+  top: 13px;
+  left: 20px;
+  display: block;
+}
+.main .main_sole .sole_right .sole_list ul li.item .l > a img {
+  width: 120px;
+  height: 120px;
+}
+.main .main_sole .sole_right .sole_list ul li.item .l > p {
+  position: absolute;
+  top: 10px;
+  left: 145px;
+  height: 44px;
+  line-height: 22px;
+  overflow: hidden;
+}
+.main .main_sole .sole_right .sole_list ul li.item .l > p a {
+  color: #000;
+}
+.main .main_sole .sole_right .sole_list ul li.item > p.price {
+  position: absolute;
+  top: 55px;
+  left: 145px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 13px;
+}
+.main .main_sole .sole_right .sole_list ul li.item > p.price span {
+  display: block;
+  font-weight: bold;
+  color: #c30;
+}
+.main .main_sole .sole_right .sole_list ul li.item > p.price span:nth-of-type(2) {
+  margin-top: 5px;
+  color: #aaa;
+  text-decoration: line-through;
+}
+.main .main_sole .sole_right .sole_list ul li.item p.comment {
+  position: absolute;
+  top: 95px;
+  left: 145px;
+  color: #487a6f;
+}
+.main .main_sole .sole_right .sole_list ul li.item .l:hover p > a {
+  color: #ec7814;
+  text-decoration: underline;
+}
+.main .main_sole .sole_right .sole_list ul li.hide {
+  display: none;
+}
+.main .main_sole .sole_right .sole_list ul li.no_line {
+  border: 0;
+}
+.main .main_sole .sole_right .sole_list ul.active {
+  display: block;
+}
+.main .main_sole .sole_right .sole_list1 ul {
+  border-top: 2px solid #487a6f;
+  padding: 0 8px;
+}
+.main .main_sole .sole_right .more {
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  color: #5097bc;
+}
+.main .main_sole1 {
+  margin-top: 20px;
+}
+.main .advert {
+  margin: 30px 0;
+  font-size: 0;
+}
+.main .advert a {
+  display: inline-block;
+  margin-right: 28px;
+}
+.main .advert a:nth-last-of-type(1) {
+  margin-right: 0;
+}
+.main .line1 {
+  border-top: 1px solid #eaeaea;
+}
+.main .hot_author .author_nav {
+  width: 950px;
+  height: 38px;
+  line-height: 38px;
+  border: 1px solid #eaeaea;
+}
+.main .hot_author .author_nav ul li {
+  float: left;
+  height: 38px;
+  padding: 0 35px;
+  font-size: 16px;
+  color: #3d3d3d;
+  background-color: #fff;
+  cursor: pointer;
+}
+.main .hot_author .author_nav ul li.active {
+  color: #487a6f;
+  font-weight: bold;
+  border-top: 2px solid #487a6f;
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  border-bottom: 1px solid #fff;
+  margin-top: -2px;
+  margin-left: -1px;
+}
+.main .hot_author .author_list {
+  width: 950px;
+  height: 472px;
+  padding-top: 5px;
+  border: 1px solid #eaeaea;
+  border-top: 0px;
+}
+.main .hot_author .author_list .author_left {
+  position: relative;
+  float: left;
+  width: 750px;
+}
+.main .hot_author .author_list .author_left .first > span {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff4f4b;
+}
+.main .hot_author .author_list .author_left .first > span span {
+  font-size: 16px;
+}
+.main .hot_author .author_list .author_left .first > a {
+  position: absolute;
+  top: 20px;
+  left: 45px;
+}
+.main .hot_author .author_list .author_left .first .first_right {
+  position: absolute;
+  top: 42px;
+  left: 210px;
+}
+.main .hot_author .author_list .author_left .first .first_right h3 a {
+  display: block;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 10px;
+}
+.main .hot_author .author_list .author_left .first .first_right h3 a:hover {
+  color: #ec7814;
+  text-decoration: underline;
+}
+.main .hot_author .author_list .author_left .first .first_right p {
+  color: #666;
+  height: 96px;
+  line-height: 24px;
+}
+.main .hot_author .author_list .author_left .works {
+  position: absolute;
+  left: 5px;
+  top: 200px;
+}
+.main .hot_author .author_list .author_left .works p {
+  font-size: 0;
+}
+.main .hot_author .author_list .author_left .works p span:nth-of-type(1) {
+  display: inline-block;
+  width: 66px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+  color: #000;
+  margin-right: 10px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  text-align: center;
+}
+.main .hot_author .author_list .author_left .works p span:nth-of-type(2) {
+  display: inline-block;
+  width: 669px;
+  margin-bottom: 4px;
+  border-bottom: 1.5px dotted #d8d8d8;
 }
