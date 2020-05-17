@@ -525,7 +525,7 @@
 .header .nav_1 .nav_select .select_hidden .all > li:hover .text:nth-last-of-type(1) {
   border: 2px solid #ff2832;
 }
-.header .nav_1 .nav_select .select_hidden .all > li:hover .list_hidden {
+.header .nav_1 .nav_select .select_hidden .all > li:hover .banner_nav {
   display: block;
 }
 .header .nav_1 .nav_select:hover .select_hidden {
@@ -729,7 +729,7 @@
   top: 157px;
 }
 .banner .banner_nav .nav_main .list:nth-of-type(10) .list_hidden {
-  top: 207px;
+  top: 285px;
 }
 .banner .banner_nav .nav_main .list:nth-of-type(11) .list_hidden {
   top: 106px;
