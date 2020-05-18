@@ -14,19 +14,15 @@ function tab(address, container, hidden, arr) {
         };
     });
 };
-// 地址
 let header_left = document.querySelector('.header_left'),
     header_left_hidden = header_left.querySelector('.header_left_hidden'),
     address = header_left.querySelector('#address'),
     links = header_left_hidden.querySelectorAll('.header_ul li a');
-
-tab(address, header_left, header_left_hidden, links);
-
-// 搜索search
 let select = document.querySelector('.header_search .search .select'),
     select_span = select.querySelector('.select #span'),
     select_hidden = select.querySelector('.select_hidden'),
     select_list = select_hidden.querySelectorAll('a');
+tab(address, header_left, header_left_hidden, links);
 tab(select_span, select, select_hidden, select_list);
 
 // 轮播图渐隐渐显
@@ -89,84 +85,87 @@ tab(select_span, select, select_hidden, select_list);
 })();
 
 // 轮播图左右切换
-function move(box) {
-    let width = parseFloat(window.getComputedStyle(box)['width']);
-    let container = box.querySelector('.container'),
-        wrapper = container.querySelector('.wrapper'),
-        sliderList = wrapper.querySelectorAll('.slider'),
-        paginationList = box.querySelectorAll('.pager span'),
-        changeLeft = box.querySelector('.btn_left'),
-        changeRight = box.querySelector('.btn_right');
-    let step = 0,
-        len = sliderList.length;
+(function () {
+    function move(box) {
+        let width = parseFloat(window.getComputedStyle(box)['width']);
+        let container = box.querySelector('.container'),
+            wrapper = container.querySelector('.wrapper'),
+            sliderList = wrapper.querySelectorAll('.slider'),
+            paginationList = box.querySelectorAll('.pager span'),
+            changeLeft = box.querySelector('.btn_left'),
+            changeRight = box.querySelector('.btn_right');
+        let step = 0,
+            len = sliderList.length;
 
-    // 自动轮播的方法
-    function autoMove() {
-        if (step === (len - 1)) {
-            step = 0;
-            wrapper.style.transitionDuration = '0s';
-            wrapper.style.left = '0px';
-            wrapper.offsetWidth;
-        }
-        step++;
-        wrapper.style.transitionDuration = '0.3s';
-        wrapper.style.left = -step * width + 'px';
-        paginationFocus();
-    }
-
-    // 焦点对齐
-    function paginationFocus() {
-        let tempStep = step;
-        tempStep === (len - 1) ? tempStep = 0 : null;
-        [].forEach.call(paginationList, (item, index) => {
-            if (index === tempStep) {
-                item.className = 'active';
-                return;
+        // 自动轮播的方法
+        function autoMove() {
+            if (step === (len - 1)) {
+                step = 0;
+                wrapper.style.transitionDuration = '0s';
+                wrapper.style.left = '0px';
+                wrapper.offsetWidth;
             }
-            item.className = '';
-        });
-    }
-
-    // 点击焦点实现切换
-    [].forEach.call(paginationList, (item, index) => {
-        item.onmouseenter = function () {
-            if (index === step || (index === 0 && step === (len - 1))) {
-                return;
-            }
-            step = index;
+            step++;
             wrapper.style.transitionDuration = '0.3s';
             wrapper.style.left = -step * width + 'px';
+            paginationFocus();
+        }
 
-            // 焦点对齐
+        // 焦点对齐
+        function paginationFocus() {
+            let tempStep = step;
+            tempStep === (len - 1) ? tempStep = 0 : null;
+            [].forEach.call(paginationList, (item, index) => {
+                if (index === tempStep) {
+                    item.className = 'active';
+                    return;
+                }
+                item.className = '';
+            });
+        }
+
+        // 点击焦点实现切换
+        [].forEach.call(paginationList, (item, index) => {
+            item.onmouseenter = function () {
+                if (index === step || (index === 0 && step === (len - 1))) {
+                    return;
+                }
+                step = index;
+                wrapper.style.transitionDuration = '0.3s';
+                wrapper.style.left = -step * width + 'px';
+
+                // 焦点对齐
+                paginationFocus();
+            };
+        });
+        changeRight.onclick = autoMove;
+        changeLeft.onclick = function () {
+            if (step === 0) {
+                step = len - 1;
+                wrapper.style.transitionDuration = '0s';
+                wrapper.style.left = -step * width + 'px';
+                wrapper.offsetWidth;
+            }
+            step--;
+            wrapper.style.transitionDuration = '0.3s';
+            wrapper.style.left = -step * width + 'px';
             paginationFocus();
         };
+    }
+    let bannerMain = document.querySelector('.banner_bottom_main'),
+        bannerNew = document.querySelector('.banner_new'),
+        lists = document.querySelectorAll('.recommend .list_bottom');
+    move(bannerNew);
+    move(bannerMain);
+    [...lists].forEach(item => {
+        move(item);
     });
-    changeRight.onclick = autoMove;
-    changeLeft.onclick = function () {
-        if (step === 0) {
-            step = len - 1;
-            wrapper.style.transitionDuration = '0s';
-            wrapper.style.left = -step * width + 'px';
-            wrapper.offsetWidth;
-        }
-        step--;
-        wrapper.style.transitionDuration = '0.3s';
-        wrapper.style.left = -step * width + 'px';
-        paginationFocus();
-    };
-}
-let bannerMain = document.querySelector('.banner_bottom_main'),
-    bannerNew = document.querySelector('.banner_new'),
-    lists = document.querySelectorAll('.recommend .list_bottom');
-move(bannerNew);
-move(bannerMain);
-move(lists[0]);
-move(lists[1]);
-move(lists[2]);
+})();
 
 function across(box) {
-    let bars = box.querySelectorAll('.bar'),        
+    let bars = box.querySelectorAll('.bar'),
         items = box.querySelectorAll('.item');
+
     function clear() {
         [...bars].forEach((item, index) => {
             item.className = 'bar';
@@ -181,18 +180,43 @@ function across(box) {
         }
     });
 }
-let bars1 = document.querySelectorAll('#bars1 .divList');
-[...bars1].forEach((_,index) => {
-    across(bars1[index]);
-});
-
-let bars2 = document.querySelectorAll('#bars2 .divList');
-[...bars2].forEach((_,index) => {
+let bars1 = document.querySelectorAll('#bars1 .divList'),
+    bars2 = document.querySelectorAll('#bars2 .divList'),
+    bars3 = document.querySelector('#bars3');
+[...bars2].forEach((_, index) => {
     across(bars2[index]);
 });
-let bars3 = document.querySelector('#bars3');
+[...bars1].forEach((_, index) => {
+    across(bars1[index]);
+});
 across(bars3);
 
+// 回到顶部
+let asideTop = document.querySelector('#top'),
+    timer = null;
+window.onscroll = function () {
+    if (document.documentElement.scrollTop >= document.documentElement.clientHeight / 2) {
+        asideTop.style.display = 'block';
+        return;
+    }
+    asideTop.style.display = 'none';
+}
+asideTop.onclick = function () {
+    let count = 0;
+    timer = setInterval(function () {
+        count = document.documentElement.scrollTop;
+        count -= 100;
+        if (count <= 0) {
+            count = 0;
+            document.documentElement.scrollTop = count;
+            clearInterval(timer);
+            return;
+        }
+        document.documentElement.scrollTop = count;
+    }, 16);
+}
+
+// 选项卡
 let box1 = document.querySelector('#box1'),
     box2 = document.querySelector('#box2'),
     box3 = document.querySelector('#box3'),
@@ -219,9 +243,9 @@ function option(box) {
     });
 }
 option(box1);
-option(box2);  
-option(box3); 
-option(box4); 
+option(box2);
+option(box3);
+option(box4);
 option(box5);
 option(box6);
 
